@@ -13,8 +13,19 @@ Ex:
 #include <math.h>
 
 void Ex2(int arr[], int n){
-	//Your codes here
 	
+	for(int i = 0; i < n; i++){
+		for(int j = i + 1; j < n; j++){
+			if((arr[i] % 2 == 0) && (arr[j] % 2 == 0) && (arr[i] < arr[j])){
+				int t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+			}
+			if((arr[i] % 2 != 0) && (arr[j] % 2 != 0) && (arr[i] > arr[j])){
+				int t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+			}
+		}
+	}
+
+	for(int i = 0; i < n; i++) printf("%d ", arr[i]);
 }
 
 int main(int argc, char *argv[]) {

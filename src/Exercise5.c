@@ -12,8 +12,16 @@ ______________________________________
 #include <math.h>
 
 void Ex5(int arr[], int n){
-	//Your codes here
+	int k = 0, ne[n];
+	for(int i = 0; i < n; i++){
+		if(arr[i] > 0) printf("%d ", arr[i]);
+		else{
+			ne[k] = arr[i];
+			k++;
+		}
+	}
 	
+	for(int i = 0; i < k; i++) printf("%d ", ne[i]);
 }
 
 int main(int argc, char *argv[]) {
