@@ -57,7 +57,7 @@ void printLogestDecSubArr(int arr[], int n){
         maxIndex = n - max;
     }
  
-    for (int i = maxIndex + 1; i < max + maxIndex + 1; i++) printf("%d ", arr[i]);
+    for (int i = maxIndex + 1; (i < max + maxIndex + 1) && (i < n); i++) printf("%d ", arr[i]);
 }
 
 void Ex3(int in_arr[], int n){
